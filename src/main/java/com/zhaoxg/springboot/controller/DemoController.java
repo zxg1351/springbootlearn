@@ -21,4 +21,10 @@ public class DemoController {
         return demoModel;
     }
 
+    @RequestMapping(value = "/zeroException")
+    public  int zeroException(){
+
+        return  100/0;
+    }
+
 }

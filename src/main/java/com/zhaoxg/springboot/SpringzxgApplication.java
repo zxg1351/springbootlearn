@@ -27,6 +27,6 @@ public class SpringzxgApplication implements EmbeddedServletContainerCustomizer{
 
 
     public void customize(ConfigurableEmbeddedServletContainer container) {
-        container.setPort(8090);
+//        container.setPort(8090);
     }
 }
