@@ -35,6 +35,28 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>6.0.6</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <version>RELEASE</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.25</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+      <version>1.5.2.RELEASE</version>
+    </dependency>
 
   </dependencies>
   <build>
@@ -47,6 +69,8 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
       <!--期望使用想要的JDK版本，需要一些的配置-->
+      <!--这个只需要修改pom.xml文件的<build>
+      <plugins>加入一个plugin即可。-->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
