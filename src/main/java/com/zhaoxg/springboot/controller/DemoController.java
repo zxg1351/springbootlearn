@@ -1,5 +1,6 @@
 package com.zhaoxg.springboot.controller;
 
+import com.google.gson.Gson;
 import com.zhaoxg.springboot.model.DemoModel;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,11 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     @RequestMapping(value = "/getDemo",method = RequestMethod.GET)
-    public DemoModel getDemo(){
+    public String getDemo(){
         DemoModel demoModel = new DemoModel();
         demoModel.setId("1");
         demoModel.setName("zhaoxg测试springboot");
-        return demoModel;
+        Gson gson = new Gson();
+
+        return  gson.toJson(demoModel);
     }
 
     @RequestMapping(value = "/zeroException")
