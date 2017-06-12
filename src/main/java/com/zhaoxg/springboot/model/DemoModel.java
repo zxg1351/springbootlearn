@@ -1,5 +1,6 @@
 package com.zhaoxg.springboot.model;
 
+
 import java.io.Serializable;
 
 /**
