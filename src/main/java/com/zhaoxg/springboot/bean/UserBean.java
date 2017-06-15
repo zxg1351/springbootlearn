@@ -44,4 +44,5 @@ public class UserBean extends BaseInfo {
     @Column(name = "del_flag")
     private String delFlag;
 
+
 }

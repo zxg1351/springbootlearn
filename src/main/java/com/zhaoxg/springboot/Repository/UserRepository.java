@@ -14,13 +14,17 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<UserBean,Integer> {
 
-    Long countByMUserAccount(String mUserAccount);
+//    Long countByMUserAccount(String mUserAccount);
+//
+//    Long deleteByDelFlag(String delFlag);
+//
+//    List<UserBean> removeByDelFlag(String delFlag);
+//
+//    List<UserBean> readByMUserAccountAAndMUSERAndMUserPassword(String mUserAccount,String mUserPassword);
+//
+//    List<UserBean> readByMUserAccountOrOrderByCreateTimeAsc(String mUserAccount, Date createTime);
 
-    Long deleteByDelFlag(String delFlag);
+    List<UserBean> findByMUserAccountAndMUserPassword(String mUserAccount,String mUserPassword);
 
-    List<UserBean> removeByDelFlag(String delFlag);
-
-    List<UserBean> readByMUserAccountAAndMUSERAndMUserPassword(String mUserAccount,String mUserPassword);
-
-    List<UserBean> readByMUserAccountOrOrderByCreateTimeAsc(String mUserAccount, Date createTime);
+    UserBean save(UserBean userBean);
 }
