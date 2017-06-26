@@ -109,6 +109,16 @@ public class UserController {
 
 
         }
+
+
+
+        @RequestMapping(value = "/userList")
+    public List<UserBean> getUserList(){
+
+            List<UserBean>  userBeans = userRepository.findAll();
+
+            return userBeans;
+        }
 //    @RequestMapping(value = "/userLoginPostTest" ,method = RequestMethod.GET)
 //    public String userLoginPostTest(@RequestParam  UserLoginBean post){
 //
